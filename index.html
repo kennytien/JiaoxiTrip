@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>礁溪山林與啡香三日遊｜2026/6/10 封閉調整版</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1f2933;
+      --muted: #657482;
+      --line: #d8e0e7;
+      --paper: #f7f9fb;
+      --panel: #ffffff;
+      --green: #2d5a27;
+      --green-soft: #e9f2e8;
+      --amber: #8a5a12;
+      --amber-soft: #fff4db;
+      --blue: #285f7a;
+      --blue-soft: #e7f2f7;
+      --danger: #9b3528;
+      --danger-soft: #fdebe8;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      line-height: 1.65;
+      color: var(--ink);
+      background: var(--paper);
+    }
+
+    .page { max-width: 1080px; margin: 0 auto; padding: 32px 20px 56px; }
+    header { padding: 28px 0 22px; border-bottom: 2px solid var(--line); }
+    h1 { margin: 0 0 8px; font-size: clamp(28px, 4vw, 44px); color: var(--green); }
+    .subtitle { margin: 0; color: var(--muted); font-size: 17px; }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin: 22px 0 0;
+    }
+    .meta { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 12px 14px; }
+    .meta b { display: block; font-size: 13px; color: var(--muted); }
+    .meta span { display: block; margin-top: 4px; font-size: 16px; font-weight: 700; }
+
+    section { margin-top: 28px; }
+    h2 { margin: 0 0 14px; color: var(--green); font-size: 24px; }
+    h3 { margin: 0 0 10px; font-size: 19px; }
+
+    .notice, .day, .checklist, .refs {
+      background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 18px;
+    }
+    .notice { border-left: 5px solid var(--amber); background: var(--amber-soft); }
+    .notice.danger { border-left-color: var(--danger); background: var(--danger-soft); }
+    .day { margin-top: 16px; }
+    .day-head {
+      display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; align-items: baseline;
+      padding-bottom: 12px; border-bottom: 1px solid var(--line);
+    }
+    .day-date { color: var(--muted); font-weight: 700; }
+    .route { color: var(--blue); font-weight: 700; }
+
+    table { width: 100%; border-collapse: collapse; margin-top: 14px; background: #fff; }
+    th, td { padding: 12px 10px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+    th { color: var(--muted); font-size: 13px; font-weight: 700; }
+    td.time { width: 110px; color: var(--green); font-weight: 800; }
+
+    .tag-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    .tag {
+      padding: 4px 10px; border-radius: 999px; background: var(--green-soft); color: var(--green);
+      font-size: 13px; font-weight: 700;
+    }
+    .tag.blue { background: var(--blue-soft); color: var(--blue); }
+    .tag.danger { background: var(--danger-soft); color: var(--danger); }
+
+    .route-map {
+      margin-top: 14px; border: 1px solid var(--line); border-radius: 8px; background: #fff; overflow: hidden;
+    }
+    .route-map svg { display: block; width: 100%; height: auto; }
+    .map-path { fill: none; stroke: var(--green); stroke-width: 6; stroke-linecap: round; }
+    .map-path.closed { stroke: var(--danger); stroke-dasharray: 8 8; }
+    .map-node { fill: #fff; stroke: var(--green); stroke-width: 3; }
+    .map-node.danger { stroke: var(--danger); }
+    .map-label { font-size: 16px; font-weight: 700; fill: var(--ink); }
+
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+    @media (max-width: 760px) {
+      .meta-grid, .two-col { grid-template-columns: 1fr; }
+      .day-head { display: block; }
+      td.time { width: auto; display: block; padding-bottom: 0; }
+      thead { display: none; }
+      tr { display: block; border: 1px solid var(--line); border-radius: 8px; margin-bottom: 10px; padding: 10px; }
+      td { display: block; border: 0; padding: 4px 0; }
+      td::before { content: attr(data-label); display: block; font-size: 11px; color: var(--muted); font-weight: 700; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <h1>礁溪山林與啡香三日遊</h1>
+      <p class="subtitle">抹茶山挑戰（封閉期替代方案）、林間秘境步道，搭配在地美食與職人咖啡。</p>
+      <div class="meta-grid">
+        <div class="meta"><b>交通建議</b><span>自駕或租機車</span></div>
+        <div class="meta"><b>主體風格</b><span>山林健行 + 職人咖啡</span></div>
+        <div class="meta"><b>體力消耗</b><span>中高（含抹茶山）</span></div>
+        <div class="meta"><b>核心區域</b><span>礁溪、頭城</span></div>
+      </div>
+    </header>
+
+    <section class="notice danger">
+      <h2>⚠️ 重要封閉公告</h2>
+      <ul>
+        <li><b>聖母登山步道 (抹茶山) 封閉：</b> 預計於 <b>2026/06/10 至 2026/11/06</b> 全面封閉進行修復工程。</li>
+        <li><b>管制範圍：</b> 管制點設於「聖母朝聖地」，往後通往通天橋及山頂路段皆禁止進入。</li>
+        <li><b>行程建議：</b> 若在封閉期間，Day 2 請改用以下<b>「五峰旗三層瀑布」</b>或<b>「草嶺古道」</b>替代方案。</li>
+      </ul>
+    </section>
+
+    <section class="day">
+      <div class="day-head">
+        <div>
+          <h2>Day 1｜林間漫步與田園咖啡</h2>
+          <div class="day-date">礁溪初抵達</div>
+        </div>
+        <div class="route">林美石磐步道、蒔花咖啡</div>
+      </div>
+
+      <table>
+        <thead>
+          <tr><th>時間</th><th>行程</th><th>細節建議</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="time" data-label="時間">11:00</td>
+            <td data-label="行程">抵達礁溪 & 排隊美食</td>
+            <td data-label="建議">柯氏蔥油餅、吳記花生捲冰淇淋。</td>
+          </tr>
+          <tr>
+            <td class="time" data-label="時間">13:30</td>
+            <td data-label="行程">林美石磐步道</td>
+            <td data-label="建議">環狀步道約 1.5-2 小時，非常平緩。</td>
+          </tr>
+          <tr>
+            <td class="time" data-label="時間">16:00</td>
+            <td data-label="行程">蒔花咖啡 (Daily Blossom)</td>
+            <td data-label="建議">摩洛哥風老宅，田野間的午茶時光。</td>
+          </tr>
+          <tr>
+            <td class="time" data-label="時間">18:30</td>
+            <td data-label="行程">礁溪市區晚餐 & 泡湯</td>
+            <td data-label="建議">樂山溫泉拉麵（邊泡腳邊吃）或定邦咖啡。</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="day">
+      <div class="day-head">
+        <div>
+          <h2>Day 2｜抹茶山 (封閉則改瀑布秘境)</h2>
+          <div class="day-date">挑戰日 / 替代路徑</div>
+        </div>
+        <div class="route">聖母登山步道 (若封閉則改五峰旗瀑布)</div>
+      </div>
+
+      <div class="route-map">
+        <svg viewBox="0 0 800 400">
+          <path d="M100 300 L250 250" class="map-path"></path>
+          <path d="M250 250 L400 200 L550 100" class="map-path closed"></path>
+          <circle cx="100" cy="300" r="8" class="map-node"></circle>
+          <circle cx="250" cy="250" r="8" class="map-node danger"></circle>
+          <circle cx="400" cy="200" r="8" class="map-node danger"></circle>
+          <circle cx="550" cy="100" r="10" class="map-node danger"></circle>
+          <text x="80" y="340" class="map-label">五峰旗停車場</text>
+          <text x="230" y="290" class="map-label" style="fill: var(--danger);">聖母朝聖地 (封閉點)</text>
+          <text x="530" y="80" class="map-label" style="fill: var(--muted);">抹茶山頂 (禁止進入)</text>
+        </svg>
+      </div>
+
+      <table>
+        <thead>
+          <tr><th>時間</th><th>正案：抹茶山 (若開放)</th><th>替代方案：五峰旗瀑布 + 黑宅</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="time" data-label="時間">07:30</td>
+            <td data-label="正案">出發至五峰旗</td>
+            <td data-label="替代">出發至五峰旗 (僅走至聖母朝聖地)</td>
+          </tr>
+          <tr>
+            <td class="time" data-label="時間">08:00-11:30</td>
+            <td data-label="正案">聖母登山步道往返</td>
+            <td data-label="替代">五峰旗瀑布全區 (一/二/三層) + 聖母朝聖地散步</td>
+          </tr>
+          <tr>
+            <td class="time" data-label="時間">12:00</td>
+            <td data-label="正案">里奧咖啡</td>
+            <td data-label="替代">黑宅 Black House (精緻早午餐與咖啡)</td>
+          </tr>
+          <tr>
+            <td class="time" data-label="時間">15:00</td>
+            <td data-label="正案">回旅館泡湯</td>
+            <td data-label="替代">礁溪溫泉公園泡腳 / 飯店午休</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="tag-row">
+        <span class="tag danger">2026/6-11 抹茶山封閉</span>
+        <span class="tag blue">推薦改走草嶺古道</span>
+      </div>
+    </section>
+
+    <section class="day">
+      <div class="day-head">
+        <div>
+          <h2>Day 3｜古道展望與海邊收尾</h2>
+          <div class="day-date">頭城展望行程</div>
+        </div>
+        <div class="route">跑馬古道、滿山望海</div>
+      </div>
+
+      <table>
+        <thead>
+          <tr><th>時間</th><th>行程</th><th>細節建議</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="time" data-label="時間">09:00</td>
+            <td data-label="行程">跑馬古道</td>
+            <td data-label="建議">淡蘭古道支線，俯瞰蘭陽平原。</td>
+          </tr>
+          <tr>
+            <td class="time" data-label="行程">12:00</td>
+            <td data-label="行程">頭城午餐</td>
+            <td data-label="建議">阿茂麵攤或頭城老街美食。</td>
+          </tr>
+          <tr>
+            <td class="time" data-label="行程">14:00</td>
+            <td data-label="行程">滿山望海咖啡</td>
+            <td data-label="建議">海景第一排，需提前預約。</td>
+          </tr>
+          <tr>
+            <td class="time" data-label="行程">16:00</td>
+            <td data-label="行程">賦歸</td>
+            <td data-label="建議">買奕順軒或鴨喜露當伴手禮。</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="two-col">
+      <div class="checklist">
+        <h2>裝備建議</h2>
+        <ul>
+          <li>排汗衣物 & 防風外套</li>
+          <li>登山鞋 (步道較濕滑)</li>
+          <li>登山杖 (抹茶山/古道必備)</li>
+          <li>1.5L 飲水 & 鹽錠</li>
+        </ul>
+      </div>
+      <div class="checklist">
+        <h2>封閉期替代步道</h2>
+        <ul>
+          <li><b>草嶺古道</b> (頭城大里端)</li>
+          <li><b>鵲絲步道</b> (礁溪短線)</li>
+          <li><b>五峰旗瀑布</b> (全區開放)</li>
+          <li><b>龍潭湖步道</b> (平緩散步)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="refs">
+      <h2>參考資料</h2>
+      <ul>
+        <li>宜蘭縣政府：2026/6/10 聖母登山步道災害復建工程封閉公告</li>
+        <li>台灣山林悠遊網：聖母登山步道 / 林美石磐步道</li>
+        <li>健行筆記：宜蘭地區步道導覽</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>
